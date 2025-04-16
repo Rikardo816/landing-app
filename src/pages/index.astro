@@ -1,11 +1,676 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Psicóloga Joselyn Monserrate | Psicología infantil especializada en TEA">
+	<header>
+		<div class="container">
+			<nav>
+				<div class="logo">
+					<h2>Psicóloga Joselyn Monserrate</h2>
+				</div>
+				<div class="nav-links">
+					<a href="#inicio">Inicio</a>
+					<a href="#sobre-mi">Sobre mí</a>
+					<a href="#servicios">Servicios</a>
+					<a href="#agenda">Agenda</a>
+					<a href="#contacto">Contacto</a>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<section id="inicio" class="hero">
+		<div class="container">
+			<div class="hero-content">
+				<div class="text-content">
+					<h1>Apoyo profesional especializado para niños con autismo</h1>
+					<p>Brindando un espacio seguro donde cada niño puede florecer a su propio ritmo</p>
+					<a href="#contacto" class="btn">Solicitar consulta</a>
+				</div>
+				<div class="image-content">
+					<div class="puzzle-container">
+						<div class="puzzle-piece"></div>
+						<div class="puzzle-piece"></div>
+						<div class="puzzle-piece"></div>
+						<div class="puzzle-piece"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="sobre-mi" class="about">
+		<div class="container">
+			<h2>Sobre mí</h2>
+			<div class="about-content">
+				<div class="image-content">
+					<div class="tree-container">
+						<div class="tree-trunk"></div>
+						<div class="tree-branches"></div>
+					</div>
+				</div>
+				<div class="text-content">
+					<h3>Psicóloga Joselyn Monserrate</h3>
+					<p class="subtitle">Psicóloga infantil especialista en Trastorno del Espectro Autista</p>
+					<p>Con más de 10 años de experiencia trabajando con niños y familias, me especializo en crear entornos de apoyo que respetan la individualidad de cada niño. Mi enfoque se basa en evidencias científicas y está centrado en las fortalezas, reconociendo que cada niño tiene un camino único de desarrollo.</p>
+					<p>Mi misión es proporcionar herramientas tanto a los niños como a sus familias para navegar juntos por los desafíos y celebrar los éxitos, por pequeños que sean.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="servicios" class="services">
+		<div class="container">
+			<h2>Servicios</h2>
+			<div class="services-grid">
+				<div class="service-card">
+					<div class="puzzle-icon"></div>
+					<h3>Evaluación y diagnóstico</h3>
+					<p>Evaluaciones completas para identificar fortalezas y áreas de crecimiento.</p>
+				</div>
+				<div class="service-card">
+					<div class="puzzle-icon"></div>
+					<h3>Terapia individual</h3>
+					<p>Sesiones personalizadas que se adaptan a las necesidades específicas de cada niño.</p>
+				</div>
+				<div class="service-card">
+					<div class="puzzle-icon"></div>
+					<h3>Asesoramiento familiar</h3>
+					<p>Apoyo y orientación para padres y familias en el día a día.</p>
+				</div>
+				<div class="service-card">
+					<div class="puzzle-icon"></div>
+					<h3>Talleres de habilidades sociales</h3>
+					<p>Grupos pequeños donde practicar interacción social en un entorno seguro.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="agenda" class="calendar-section">
+		<div class="container">
+			<h2>Agenda tu Consulta</h2>
+			<div class="calendar-content">
+				<div class="text-content">
+					<h3>Reserva tu cita en línea</h3>
+					<p>Selecciona la fecha y hora que mejor te convenga para tu consulta. Recibirás una confirmación por correo electrónico.</p>
+					<p>Si tienes alguna pregunta antes de agendar, no dudes en contactarme directamente por WhatsApp.</p>
+					<a href="https://wa.me/593XXXXXXXXX" class="btn whatsapp-btn" target="_blank" rel="noopener noreferrer">
+						<span class="whatsapp-icon">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20" height="20">
+								<path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+							</svg>
+						</span>
+						Contactar por WhatsApp
+					</a>
+				</div>
+				<div class="calendar-container">
+					<div class="responsive-iframe-container">
+						<!-- Aquí irá el iframe del Google Calendar -->
+						<iframe src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID%40gmail.com&ctz=America%2FGuayaquil" style="border: 0" width="100%" height="500" frameborder="0" scrolling="no"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="contacto" class="contact">
+		<div class="container">
+			<h2>Contacto</h2>
+			<div class="contact-content">
+				<div class="text-content">
+					<p>Si desea programar una consulta inicial o tiene alguna pregunta, por favor contácteme:</p>
+					<div class="contact-info">
+						<p>📱 Teléfono: (123) 456-7890</p>
+						<p>✉️ Email: info@joselynmonserrate-psi.com</p>
+						<p>📍 Dirección: Calle Principal 123, Madrid, España</p>
+					</div>
+				</div>
+				<div class="form-container">
+					<form>
+						<div class="form-group">
+							<label for="name">Nombre</label>
+							<input type="text" id="name" name="name" required>
+						</div>
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input type="email" id="email" name="email" required>
+						</div>
+						<div class="form-group">
+							<label for="message">Mensaje</label>
+							<textarea id="message" name="message" rows="4" required></textarea>
+						</div>
+						<button type="submit" class="btn">Enviar mensaje</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="footer-content">
+				<p>&copy; 2025 Psicóloga Joselyn Monserrate - Psicología infantil</p>
+				<div class="social-links">
+					<a href="#" aria-label="Facebook">Facebook</a>
+					<a href="#" aria-label="Instagram">Instagram</a>
+					<a href="#" aria-label="LinkedIn">LinkedIn</a>
+				</div>
+			</div>
+		</div>
+	</footer>
 </Layout>
+
+<style>
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
+
+	/* Header styles */
+	header {
+		background-color: var(--color-mint);
+		padding: 20px 0;
+		position: fixed;
+		width: 100%;
+		z-index: 100;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	}
+
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.logo h2 {
+		margin: 0;
+		color: #333;
+		font-weight: 700;
+	}
+
+	.nav-links {
+		display: flex;
+		gap: 30px;
+	}
+
+	.nav-links a {
+		text-decoration: none;
+		color: #333;
+		font-weight: 600;
+		transition: color 0.3s;
+	}
+
+	.nav-links a:hover {
+		color: var(--color-lavender);
+	}
+
+	/* Button styles */
+	.btn {
+		display: inline-block;
+		padding: 12px 24px;
+		background-color: var(--color-lavender);
+		color: white;
+		border-radius: 30px;
+		text-decoration: none;
+		font-weight: 600;
+		transition: transform 0.3s, background-color 0.3s;
+		border: none;
+		cursor: pointer;
+	}
+
+	.btn:hover {
+		transform: translateY(-3px);
+		background-color: var(--color-rose);
+	}
+
+	.whatsapp-btn {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		background-color: #25D366;
+	}
+
+	.whatsapp-btn:hover {
+		background-color: #1DA851;
+	}
+
+	/* Hero section */
+	.hero {
+		background: linear-gradient(135deg, var(--color-mint) 0%, white 100%);
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		padding-top: 80px;
+	}
+
+	.hero-content {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+	}
+
+	.hero .text-content {
+		flex: 1;
+	}
+
+	.hero h1 {
+		font-size: 2.5rem;
+		margin-bottom: 20px;
+		color: #333;
+	}
+
+	.hero p {
+		font-size: 1.2rem;
+		margin-bottom: 30px;
+		color: #555;
+	}
+
+	.hero .image-content {
+		flex: 1;
+	}
+
+	/* Puzzle animation in hero */
+	.puzzle-container {
+		position: relative;
+		width: 400px;
+		height: 400px;
+		margin: 0 auto;
+	}
+
+	.puzzle-piece {
+		position: absolute;
+		width: 150px;
+		height: 150px;
+		border-radius: 30px;
+		animation: float 4s infinite ease-in-out;
+	}
+
+	.puzzle-piece:nth-child(1) {
+		background-color: var(--color-rose);
+		top: 0;
+		left: 0;
+		clip-path: path('M 0,0 H 120 V 30 H 150 V 120 H 120 V 150 H 30 V 120 H 0 Z');
+		animation-delay: 0s;
+	}
+
+	.puzzle-piece:nth-child(2) {
+		background-color: var(--color-lavender);
+		top: 0;
+		right: 0;
+		clip-path: path('M 0,0 H 120 V 30 H 150 V 120 H 120 V 150 H 30 V 120 H 0 V 30 Z');
+		transform: rotate(90deg);
+		animation-delay: 1s;
+	}
+
+	.puzzle-piece:nth-child(3) {
+		background-color: var(--color-cream);
+		bottom: 0;
+		right: 0;
+		clip-path: path('M 0,0 H 120 V 30 H 150 V 120 H 120 V 150 H 30 V 120 H 0 V 30 Z');
+		transform: rotate(180deg);
+		animation-delay: 2s;
+	}
+
+	.puzzle-piece:nth-child(4) {
+		background-color: var(--color-peach);
+		bottom: 0;
+		left: 0;
+		clip-path: path('M 0,0 H 120 V 30 H 150 V 120 H 120 V 150 H 30 V 120 H 0 V 30 Z');
+		transform: rotate(270deg);
+		animation-delay: 3s;
+	}
+
+	@keyframes float {
+		0% { transform: translateY(0) rotate(0deg); }
+		50% { transform: translateY(-10px) rotate(5deg); }
+		100% { transform: translateY(0) rotate(0deg); }
+	}
+
+	/* About section */
+	.about {
+		padding: 100px 0;
+		background-color: white;
+	}
+
+	.about h2, .services h2, .calendar-section h2, .contact h2 {
+		text-align: center;
+		font-size: 2.2rem;
+		margin-bottom: 60px;
+		color: #333;
+		position: relative;
+	}
+
+	.about h2:after, .services h2:after, .calendar-section h2:after, .contact h2:after {
+		content: '';
+		position: absolute;
+		width: 80px;
+		height: 4px;
+		background-color: var(--color-peach);
+		bottom: -15px;
+		left: 50%;
+		transform: translateX(-50%);
+		border-radius: 2px;
+	}
+
+	.about-content {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+	}
+
+	.about .image-content, .about .text-content {
+		flex: 1;
+	}
+
+	.about .text-content h3 {
+		font-size: 1.8rem;
+		margin-bottom: 10px;
+		color: #333;
+	}
+
+	.about .text-content .subtitle {
+		color: var(--color-rose);
+		font-weight: 600;
+		margin-bottom: 20px;
+	}
+
+	.about .text-content p {
+		margin-bottom: 15px;
+		line-height: 1.6;
+	}
+
+	/* Tree animation in about section */
+	.tree-container {
+		position: relative;
+		width: 400px;
+		height: 500px;
+		margin: 0 auto;
+	}
+
+	.tree-trunk {
+		position: absolute;
+		width: 40px;
+		height: 250px;
+		background-color: var(--color-peach);
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		border-radius: 10px;
+	}
+
+	.tree-branches {
+		position: absolute;
+		width: 300px;
+		height: 300px;
+		background-color: var(--color-mint);
+		border-radius: 50%;
+		bottom: 200px;
+		left: 50%;
+		transform: translateX(-50%);
+		animation: sway 8s infinite ease-in-out;
+		box-shadow: inset 20px -20px 0 var(--color-cream), 
+					inset -20px 20px 0 var(--color-lavender),
+					inset 50px 50px 0 var(--color-rose);
+	}
+
+	@keyframes sway {
+		0% { transform: translateX(-50%) rotate(0deg); }
+		25% { transform: translateX(-48%) rotate(-5deg); }
+		50% { transform: translateX(-50%) rotate(0deg); }
+		75% { transform: translateX(-52%) rotate(5deg); }
+		100% { transform: translateX(-50%) rotate(0deg); }
+	}
+
+	/* Services section */
+	.services {
+		padding: 100px 0;
+		background-color: var(--color-cream);
+		background-image: linear-gradient(135deg, var(--color-cream) 0%, white 100%);
+	}
+
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 30px;
+	}
+
+	.service-card {
+		background-color: white;
+		border-radius: 15px;
+		padding: 30px;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+		transition: transform 0.3s;
+		text-align: center;
+	}
+
+	.service-card:hover {
+		transform: translateY(-10px);
+	}
+
+	.service-card h3 {
+		margin: 20px 0;
+		color: #333;
+	}
+
+	.service-card p {
+		color: #666;
+		line-height: 1.6;
+	}
+
+	/* Puzzle icon for services */
+	.puzzle-icon {
+		width: 80px;
+		height: 80px;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	.puzzle-icon:before {
+		content: '';
+		position: absolute;
+		width: 70px;
+		height: 70px;
+		background-color: var(--color-lavender);
+		top: 5px;
+		left: 5px;
+		clip-path: path('M 0,20 H 20 V 0 H 50 V 20 H 70 V 50 H 50 V 70 H 20 V 50 H 0 Z');
+	}
+
+	.service-card:nth-child(1) .puzzle-icon:before {
+		background-color: var(--color-rose);
+	}
+
+	.service-card:nth-child(2) .puzzle-icon:before {
+		background-color: var(--color-lavender);
+	}
+
+	.service-card:nth-child(3) .puzzle-icon:before {
+		background-color: var(--color-mint);
+	}
+
+	.service-card:nth-child(4) .puzzle-icon:before {
+		background-color: var(--color-peach);
+	}
+
+	/* Calendar section styles */
+	.calendar-section {
+		padding: 100px 0;
+		background-color: var(--color-mint);
+		background-image: linear-gradient(135deg, var(--color-mint) 0%, white 100%);
+	}
+
+	.calendar-content {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+	}
+
+	.calendar-section .text-content, .calendar-section .calendar-container {
+		flex: 1;
+	}
+
+	.calendar-section .text-content h3 {
+		font-size: 1.8rem;
+		margin-bottom: 20px;
+		color: #333;
+	}
+
+	.calendar-section .text-content p {
+		margin-bottom: 20px;
+		line-height: 1.6;
+	}
+
+	.responsive-iframe-container {
+		position: relative;
+		overflow: hidden;
+		padding-top: 75%;
+		border-radius: 15px;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	}
+
+	.responsive-iframe-container iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: none;
+	}
+
+	.whatsapp-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: white;
+	}
+
+	/* Contact section */
+	.contact {
+		padding: 100px 0;
+		background-color: white;
+	}
+
+	.contact-content {
+		display: flex;
+		gap: 40px;
+		align-items: center;
+	}
+
+	.contact .text-content, .contact .form-container {
+		flex: 1;
+	}
+
+	.contact-info {
+		background-color: var(--color-mint);
+		padding: 30px;
+		border-radius: 15px;
+		margin-top: 30px;
+	}
+
+	.contact-info p {
+		margin: 15px 0;
+	}
+
+	.form-container form {
+		background-color: white;
+		padding: 30px;
+		border-radius: 15px;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+	}
+
+	.form-group {
+		margin-bottom: 20px;
+	}
+
+	.form-group label {
+		display: block;
+		margin-bottom: 8px;
+		font-weight: 600;
+	}
+
+	.form-group input, .form-group textarea {
+		width: 100%;
+		padding: 12px;
+		border: 2px solid #eee;
+		border-radius: 8px;
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	.form-group input:focus, .form-group textarea:focus {
+		outline: none;
+		border-color: var(--color-lavender);
+	}
+
+	/* Footer */
+	footer {
+		padding: 40px 0;
+		background-color: var(--color-lavender);
+		color: white;
+	}
+
+	.footer-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.social-links {
+		display: flex;
+		gap: 20px;
+	}
+
+	.social-links a {
+		color: white;
+		text-decoration: none;
+		transition: color 0.3s;
+	}
+
+	.social-links a:hover {
+		color: var(--color-cream);
+	}
+
+	/* Responsive styles */
+	@media (max-width: 991px) {
+		.hero-content, .about-content, .contact-content, .calendar-content {
+			flex-direction: column;
+		}
+
+		.puzzle-container, .tree-container {
+			width: 300px;
+			height: 300px;
+		}
+
+		.tree-branches {
+			width: 250px;
+			height: 250px;
+			bottom: 170px;
+		}
+
+		.calendar-container {
+			width: 100%;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.nav-links {
+			display: none;
+		}
+
+		.hero h1 {
+			font-size: 2rem;
+		}
+
+		.about h2, .services h2, .contact h2 {
+			font-size: 1.8rem;
+		}
+
+		.footer-content {
+			flex-direction: column;
+			gap: 20px;
+			text-align: center;
+		}
+	}
+</style>
