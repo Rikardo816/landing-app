@@ -9,7 +9,12 @@ import Layout from '../layouts/Layout.astro';
 				<div class="logo">
 					<h2>Psicóloga Joselyn Monserrate</h2>
 				</div>
-				<div class="nav-links">
+				<div class="menu-icon" id="menu-toggle">
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+				</div>
+				<div class="nav-links" id="nav-menu">
 					<a href="#inicio">Inicio</a>
 					<a href="#sobre-mi">Sobre mí</a>
 					<a href="#servicios">Servicios</a>
@@ -162,6 +167,30 @@ import Layout from '../layouts/Layout.astro';
 	</footer>
 </Layout>
 
+<script>
+	// Menú hamburguesa - Funcionalidad
+	document.addEventListener('DOMContentLoaded', () => {
+		const menuToggle = document.getElementById('menu-toggle');
+		const navMenu = document.getElementById('nav-menu');
+		
+		if (menuToggle && navMenu) {
+			menuToggle.addEventListener('click', () => {
+				navMenu.classList.toggle('active');
+				menuToggle.classList.toggle('active');
+			});
+			
+			// Cerrar menú al hacer clic en un enlace
+			const navLinks = navMenu.querySelectorAll('a');
+			navLinks.forEach(link => {
+				link.addEventListener('click', () => {
+					navMenu.classList.remove('active');
+					menuToggle.classList.remove('active');
+				});
+			});
+		}
+	});
+</script>
+
 <style>
 	.container {
 		max-width: 1200px;
@@ -205,6 +234,37 @@ import Layout from '../layouts/Layout.astro';
 
 	.nav-links a:hover {
 		color: var(--color-lavender);
+	}
+
+	/* Menú hamburguesa */
+	.menu-icon {
+		display: none;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 30px;
+		height: 21px;
+		cursor: pointer;
+		z-index: 150;
+	}
+
+	.bar {
+		height: 3px;
+		width: 100%;
+		background-color: #333;
+		border-radius: 10px;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.menu-icon.active .bar:nth-child(1) {
+		transform: translateY(9px) rotate(45deg);
+	}
+
+	.menu-icon.active .bar:nth-child(2) {
+		opacity: 0;
+	}
+
+	.menu-icon.active .bar:nth-child(3) {
+		transform: translateY(-9px) rotate(-45deg);
 	}
 
 	/* Button styles */
@@ -656,14 +716,33 @@ import Layout from '../layouts/Layout.astro';
 
 	@media (max-width: 768px) {
 		.nav-links {
-			display: none;
+			position: fixed;
+			top: 0;
+			right: -100%;
+			flex-direction: column;
+			background-color: var(--color-mint);
+			width: 80%;
+			max-width: 300px;
+			height: 100vh;
+			padding: 80px 20px 20px;
+			transition: right 0.3s ease;
+			gap: 20px;
+			box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
 		}
-
+		
+		.nav-links.active {
+			right: 0;
+		}
+		
+		.menu-icon {
+			display: flex;
+		}
+		
 		.hero h1 {
-			font-size: 2rem;
+			font-size: 1.8rem;
 		}
 
-		.about h2, .services h2, .contact h2 {
+		.about h2, .services h2, .contact h2, .calendar-section h2 {
 			font-size: 1.8rem;
 		}
 
@@ -671,6 +750,48 @@ import Layout from '../layouts/Layout.astro';
 			flex-direction: column;
 			gap: 20px;
 			text-align: center;
+		}
+		
+		.services-grid {
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
+		
+		.contact-content, .calendar-content {
+			gap: 30px;
+		}
+		
+		.form-group input, .form-group textarea {
+			padding: 10px;
+		}
+	}
+	
+	@media (max-width: 480px) {
+		.logo h2 {
+			font-size: 1rem;
+		}
+		
+		.puzzle-container, .tree-container {
+			width: 220px;
+			height: 220px;
+		}
+		
+		.tree-branches {
+			width: 180px;
+			height: 180px;
+			bottom: 140px;
+		}
+		
+		.about-content, .contact-content {
+			gap: 20px;
+		}
+		
+		section {
+			padding: 60px 0;
+		}
+		
+		.about h2:after, .services h2:after, .calendar-section h2:after, .contact h2:after {
+			width: 60px;
 		}
 	}
 </style>
