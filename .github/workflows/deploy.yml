@@ -3,14 +3,30 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
-      - uses: actions/checkout@v3
-      - uses: withastro/action@v1
-        with:
-          deploy-dir: dist
+      - name: Checkout tu repositorio usando git
+        uses: actions/checkout@v4
+
+      - name: Instala, construye y sube tu sitio
+        uses: withastro/action@v3
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
